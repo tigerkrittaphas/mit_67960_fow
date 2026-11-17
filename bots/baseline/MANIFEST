@@ -1,0 +1,4 @@
+# Files packaged into the submission ZIP (one path or glob per line).
+run.sh
+baseline.py
+referee.py

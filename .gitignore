@@ -1,0 +1,23 @@
+# Team credentials
+.env
+.env.*
+!.env.example
+.secrets/
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+
+# Generated experiment and submission outputs
+artifacts/*
+!artifacts/.gitkeep
+runs/*
+!runs/.gitkeep
+dist/
+build/
