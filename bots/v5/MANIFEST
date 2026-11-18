@@ -1,0 +1,10 @@
+# Files packaged into the submission ZIP (one path or glob per line).
+run.sh
+bot.py
+belief.py
+search.py
+voi.py
+obsmoves.py
+referee.py
+valuenet.py
+value.npz

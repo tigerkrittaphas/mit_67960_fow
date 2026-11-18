@@ -1,0 +1,161 @@
+{
+  "W": {
+    "baseline": {
+      "opponent": "baseline",
+      "n": 400,
+      "win": 255,
+      "draw": 0,
+      "loss": 145,
+      "score": 0.6375,
+      "score_ci95": 0.047110767081422054,
+      "mean_plies": 21.7825,
+      "reasons": {
+        "1-0 King capturable": 255,
+        "0-1 King capturable": 145
+      },
+      "greedy": false
+    },
+    "random": {
+      "opponent": "random",
+      "n": 400,
+      "win": 332,
+      "draw": 0,
+      "loss": 68,
+      "score": 0.83,
+      "score_ci95": 0.03681201434314618,
+      "mean_plies": 25.04,
+      "reasons": {
+        "1-0 King capturable": 332,
+        "0-1 King capturable": 68
+      },
+      "greedy": false
+    }
+  },
+  "G": {
+    "baseline": {
+      "opponent": "baseline",
+      "n": 400,
+      "win": 108,
+      "draw": 0,
+      "loss": 292,
+      "score": 0.27,
+      "score_ci95": 0.0435080268456293,
+      "mean_plies": 34.555,
+      "reasons": {
+        "1-0 King capturable": 108,
+        "0-1 King capturable": 292
+      },
+      "greedy": false
+    },
+    "random": {
+      "opponent": "random",
+      "n": 400,
+      "win": 280,
+      "draw": 0,
+      "loss": 120,
+      "score": 0.7,
+      "score_ci95": 0.04490924181056724,
+      "mean_plies": 41.505,
+      "reasons": {
+        "0-1 King capturable": 120,
+        "1-0 King capturable": 280
+      },
+      "greedy": false
+    }
+  },
+  "E": {
+    "baseline": {
+      "opponent": "baseline",
+      "n": 400,
+      "win": 79,
+      "draw": 0,
+      "loss": 321,
+      "score": 0.1975,
+      "score_ci95": 0.03901504805840946,
+      "mean_plies": 18.3475,
+      "reasons": {
+        "1-0 King capturable": 79,
+        "0-1 King capturable": 321
+      },
+      "greedy": false
+    },
+    "random": {
+      "opponent": "random",
+      "n": 400,
+      "win": 212,
+      "draw": 0,
+      "loss": 188,
+      "score": 0.53,
+      "score_ci95": 0.048911720476793694,
+      "mean_plies": 29.625,
+      "reasons": {
+        "1-0 King capturable": 212,
+        "0-1 King capturable": 188
+      },
+      "greedy": false
+    }
+  },
+  "eps": {
+    "global": {
+      "weights": [
+        0.0,
+        0.29840032504776126,
+        0.29977496666427683,
+        0.2850040528986792
+      ],
+      "intercept": -0.5060396539867069,
+      "r2_test": 0.42868582409976796,
+      "resid_p95": 0.1577037413084006,
+      "resid_max": 1.4730171519085153,
+      "y_std": 0.12217637896537781
+    },
+    "within_state": {
+      "weights": [
+        0.0,
+        0.3494750909388756,
+        0.15810011186588674,
+        0.31403809257000515
+      ],
+      "intercept": 0.0,
+      "r2_test": 0.29067953040211014,
+      "resid_p95": 0.11570916787125465,
+      "resid_max": 1.2054150555185643,
+      "y_std": 0.07958093285560608
+    },
+    "argmax_agreement": 0.4454308093994778,
+    "mean_win_q_spread_across_moves": 0.2923378348350525,
+    "n_states": 3830
+  },
+  "E-fit": {
+    "baseline": {
+      "opponent": "baseline",
+      "n": 400,
+      "win": 86,
+      "draw": 0,
+      "loss": 314,
+      "score": 0.215,
+      "score_ci95": 0.040260589911227086,
+      "mean_plies": 19.65,
+      "reasons": {
+        "1-0 King capturable": 86,
+        "0-1 King capturable": 314
+      },
+      "greedy": false
+    },
+    "random": {
+      "opponent": "random",
+      "n": 400,
+      "win": 261,
+      "draw": 0,
+      "loss": 139,
+      "score": 0.6525,
+      "score_ci95": 0.04666526518728893,
+      "mean_plies": 29.2525,
+      "reasons": {
+        "1-0 King capturable": 261,
+        "0-1 King capturable": 139
+      },
+      "greedy": false
+    }
+  }
+}

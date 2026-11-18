@@ -1,0 +1,46 @@
+{
+  "candidate": "v4b",
+  "time_control": [
+    60.0,
+    1.0
+  ],
+  "wall_sec": 467,
+  "per_opponent": [
+    {
+      "opponent": "v3",
+      "games": 100,
+      "win": 4,
+      "draw": 3,
+      "loss": 93,
+      "score": 0.055,
+      "score_ci95": [
+        0.0137,
+        0.0963
+      ],
+      "elo": -494.0,
+      "elo_ci95": [
+        -743.4,
+        -388.9
+      ],
+      "score_white": 0.04,
+      "score_black": 0.07,
+      "mean_plies": 59.6,
+      "cand_mean_time_used": 16.89,
+      "cand_max_move_time": 5.328,
+      "cand_failures": 0,
+      "reasons": {
+        "1-0 King capturable": 47,
+        "0-1 King capturable": 50,
+        "1/2-1/2 Threefold repetition": 3
+      }
+    }
+  ],
+  "sprt": {
+    "llr": -45.176,
+    "bounds": [
+      -2.944,
+      2.944
+    ],
+    "verdict": "H0 accepted (not stronger)"
+  }
+}

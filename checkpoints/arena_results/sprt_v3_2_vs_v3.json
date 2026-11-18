@@ -1,0 +1,47 @@
+{
+  "candidate": "v3_2",
+  "time_control": [
+    60.0,
+    1.0
+  ],
+  "wall_sec": 3453,
+  "per_opponent": [
+    {
+      "opponent": "v3",
+      "games": 408,
+      "win": 220,
+      "draw": 18,
+      "loss": 170,
+      "score": 0.5613,
+      "score_ci95": [
+        0.5142,
+        0.6083
+      ],
+      "elo": 42.8,
+      "elo_ci95": [
+        9.9,
+        76.5
+      ],
+      "score_white": 0.586,
+      "score_black": 0.537,
+      "mean_plies": 78.4,
+      "cand_mean_time_used": 50.48,
+      "cand_max_move_time": 6.6,
+      "cand_failures": 0,
+      "reasons": {
+        "1-0 King capturable": 205,
+        "0-1 King capturable": 185,
+        "1/2-1/2 Threefold repetition": 17,
+        "1/2-1/2 50-move rule": 1
+      }
+    }
+  ],
+  "sprt": {
+    "llr": 2.969,
+    "bounds": [
+      -2.944,
+      2.944
+    ],
+    "verdict": "H1 accepted (candidate stronger)"
+  }
+}

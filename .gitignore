@@ -6,6 +6,7 @@
 
 # Local environments and caches
 .venv/
+.venv-*/
 venv/
 __pycache__/
 *.py[cod]
@@ -21,3 +22,9 @@ runs/*
 !runs/.gitkeep
 dist/
 build/
+
+# Local tools (e.g. Stockfish build)
+.tools/
+
+# Local self-play opponent copies (regenerate with cp bots/vX bots/vXself)
+bots/*self/
