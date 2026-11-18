@@ -1,0 +1,38 @@
+{
+  "candidate": "v3",
+  "time_control": [
+    30.0,
+    0.3
+  ],
+  "wall_sec": 3696,
+  "per_opponent": [
+    {
+      "opponent": "v3self",
+      "games": 5000,
+      "win": 2308,
+      "draw": 389,
+      "loss": 2303,
+      "score": 0.5005,
+      "score_ci95": [
+        0.4872,
+        0.5138
+      ],
+      "elo": 0.3,
+      "elo_ci95": [
+        -8.9,
+        9.6
+      ],
+      "score_white": 0.519,
+      "score_black": 0.482,
+      "mean_plies": 77.6,
+      "cand_mean_time_used": 7.98,
+      "cand_max_move_time": 3.641,
+      "cand_failures": 0,
+      "reasons": {
+        "1-0 King capturable": 2398,
+        "1/2-1/2 Threefold repetition": 389,
+        "0-1 King capturable": 2213
+      }
+    }
+  ]
+}
