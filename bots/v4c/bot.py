@@ -30,7 +30,10 @@ def log(*a):
 
 def budget(remaining: float, inc: float) -> float:
     """Seconds to spend on this move (belief update included)."""
-    return max(0.05, min(remaining / 30.0 + 0.7 * inc, 4.0, remaining * 0.25))
+    b = min(remaining / 30.0 + 0.7 * inc, 4.0, remaining * 0.25)
+    if remaining < 15.0:               # low on time: protect the clock
+        b = min(b, 0.1 * remaining + 0.5 * inc)
+    return max(0.05, b)
 
 
 def main():
@@ -67,8 +70,9 @@ def main():
             moves = tracker.legal_moves()
             if not moves:
                 return
-            boards = belief.sample(N_BOARDS)
-            dl = t0 + 0.9 * total
+            n_boards = N_BOARDS if total >= 1.0 else max(6, int(N_BOARDS * total))
+            boards = belief.sample(n_boards)
+            dl = t0 + 0.8 * total
             voi_fn = (lambda m: voi.voi(boards, m, side, tracker.rights, dl)) if USE_VOI else None
             move, info = search.choose(boards, moves, side, rng, deadline=dl,
                                        last_move=last_move, voi_fn=voi_fn,

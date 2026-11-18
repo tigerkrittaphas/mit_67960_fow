@@ -112,7 +112,7 @@ class Belief:
             self.boards = [b for b in self.boards if consistent(b, om, self.side)]
         rebuilt = False
         if not self.boards:
-            self._rebuild(om)
+            self._rebuild(om, deadline=deadline)
             rebuilt = True
         self.stats.append(dict(ply=self.ply, n=len(self.boards), expanded=expanded, rebuilt=rebuilt,
                                capped=self.capped, sec=time.perf_counter() - t0))
@@ -171,7 +171,7 @@ class Belief:
         self.boards = out
 
     # -------------------------------------------------------------- recovery
-    def _rebuild(self, om: ObsMasks, want: int = 300, tries: int = 30000):
+    def _rebuild(self, om: ObsMasks, want: int = 300, tries: int = 30000, deadline=None):
         """Sample hidden enemy pieces onto unseen squares until consistent."""
         self.capped = True
         enemy = not self.side
@@ -192,7 +192,7 @@ class Belief:
         turn = chess.WHITE if self.ply % 2 == 0 else chess.BLACK
         out, seen = [], set()
         for _ in range(tries):
-            if len(out) >= want:
+            if len(out) >= want or (deadline and out and time.perf_counter() > deadline):
                 break
             b = FowBoard(None)
             for sq, c in enumerate(obs):

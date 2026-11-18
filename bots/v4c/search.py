@@ -138,7 +138,8 @@ def choose(boards, moves, side, rng, deadline, topk=3, margin=0.15, last_move=No
     leaves, owners = [], []
     processed = 0
     for b in boards:
-        if processed and time.perf_counter() > deadline:
+        # reserve time for the batched value-net pass over the leaves collected so far
+        if processed and time.perf_counter() + LEAF_COST * (len(leaves) + len(moves)) > deadline:
             break
         processed += 1
         for m in moves:
@@ -197,6 +198,7 @@ def choose(boards, moves, side, rng, deadline, topk=3, margin=0.15, last_move=No
     return move, dict(n_boards=len(boards), n_safety=n_safety, best=round(best, 3), p_loss=round(min_loss, 3), pool=len(pool), **info_extra)
 
 
+LEAF_COST = 0.0004   # seconds per value-net leaf (features + forward), measured ~0.2 ms; 2x margin
 LOGIT_SCALE = 2.5   # map logit to roughly pawn units so margins/sentinels keep their meaning
 try:
     from valuenet import ValueNet

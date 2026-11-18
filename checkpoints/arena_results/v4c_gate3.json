@@ -1,0 +1,64 @@
+{
+  "candidate": "v4c",
+  "time_control": [
+    180.0,
+    2.0
+  ],
+  "wall_sec": 1088,
+  "per_opponent": [
+    {
+      "opponent": "baseline",
+      "games": 400,
+      "win": 396,
+      "draw": 0,
+      "loss": 4,
+      "score": 0.99,
+      "score_ci95": [
+        0.9802,
+        0.9998
+      ],
+      "elo": 798.3,
+      "elo_ci95": [
+        678.3,
+        1441.4
+      ],
+      "score_white": 0.99,
+      "score_black": 0.99,
+      "mean_plies": 34.9,
+      "cand_mean_time_used": 15.43,
+      "cand_max_move_time": 5.637,
+      "cand_failures": 0,
+      "reasons": {
+        "0-1 King capturable": 200,
+        "1-0 King capturable": 200
+      }
+    },
+    {
+      "opponent": "random",
+      "games": 400,
+      "win": 400,
+      "draw": 0,
+      "loss": 0,
+      "score": 1.0,
+      "score_ci95": [
+        1.0,
+        1
+      ],
+      "elo": 2400.0,
+      "elo_ci95": [
+        2400.0,
+        2400.0
+      ],
+      "score_white": 1.0,
+      "score_black": 1.0,
+      "mean_plies": 34.0,
+      "cand_mean_time_used": 20.92,
+      "cand_max_move_time": 6.351,
+      "cand_failures": 0,
+      "reasons": {
+        "1-0 King capturable": 200,
+        "0-1 King capturable": 200
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "candidate": "v4c",
+  "time_control": [
+    20.0,
+    0.2
+  ],
+  "wall_sec": 652,
+  "per_opponent": [
+    {
+      "opponent": "v4cself",
+      "games": 200,
+      "win": 96,
+      "draw": 1,
+      "loss": 103,
+      "score": 0.4825,
+      "score_ci95": [
+        0.4134,
+        0.5516
+      ],
+      "elo": -12.2,
+      "elo_ci95": [
+        -60.8,
+        36.0
+      ],
+      "score_white": 0.54,
+      "score_black": 0.425,
+      "mean_plies": 77.4,
+      "cand_mean_time_used": 23.96,
+      "cand_max_move_time": 2.259,
+      "cand_failures": 18,
+      "reasons": {
+        "0-1 King capturable": 68,
+        "1-0 King capturable": 91,
+        "0-1 Time forfeit": 20,
+        "1-0 Time forfeit": 20,
+        "1/2-1/2 Threefold repetition": 1
+      }
+    }
+  ]
+}
